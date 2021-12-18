@@ -1,0 +1,58 @@
+
+public class Pessoal {
+
+	private String nome = new String();
+	private int diaDeNascimento;
+	private int mesDeNascimento;
+	private int anoDeNascimento;
+	private int telefone;
+
+	public Pessoal(String nome, int diaDeNascimento, int mesDeNascimento, int anoDeNascimento, int telefone) {
+		this.nome = nome;
+		this.diaDeNascimento = diaDeNascimento;
+		this.mesDeNascimento = mesDeNascimento;
+		this.anoDeNascimento = anoDeNascimento;
+		this.telefone = telefone;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getDiaDeNascimento() {
+		return diaDeNascimento;
+	}
+
+	public void setDiaDeNascimento(int diaDeNascimento) {
+		this.diaDeNascimento = diaDeNascimento;
+	}
+
+	public int getMesDeNascimento() {
+		return mesDeNascimento;
+	}
+
+	public void setMesDeNascimento(int mesDeNascimento) {
+		this.mesDeNascimento = mesDeNascimento;
+	}
+
+	public int getAnoDeNascimento() {
+		return anoDeNascimento;
+	}
+
+	public void setAnoDeNascimento(int anoDeNascimento) {
+		this.anoDeNascimento = anoDeNascimento;
+	}
+
+	public int getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(int telefone) {
+		this.telefone = telefone;
+	}
+
+}

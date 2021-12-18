@@ -1,0 +1,24 @@
+import com.sun.tools.classfile.Opcode.Set;
+
+public class Caixa {
+
+//	private Conta conta;
+//	private Conta origen;
+//	private Conta destino;
+//	addiconal classe operacoes, e colocar todas operacoes dentro dela
+//	classe de menus
+//	adicionar uma classe de verificacoes
+//	classe com avisos
+
+	public void saque(Conta conta, double valorSaque) {
+		System.out.println("saldo: " + conta.getSaldoDaConta());		
+	}
+
+	public void deposito(Conta conta, double valorDeposito) {
+//		verificacoes se posso sacar
+		conta.setSaldoDaConta(conta.getSaldoDaConta() + valorDeposito);
+		System.out.println("valor depoistador");
+
+	}
+
+}

@@ -1,0 +1,10 @@
+
+public class MainCaixa {
+	
+	public static final int NUMERO_LIMITE_DE_CONTAS = 2;
+	
+	public static void main(String[] args) {
+		
+		double[] bancoDeDados = new double[NUMERO_LIMITE_DE_CONTAS];
+	}
+}

@@ -1,0 +1,12 @@
+
+public class Pessoal {
+	
+	private String nome = new String();
+	private int diaDeNascimento;
+	private int	mesDeNascimento;
+	private int anoDeNascimento;
+	private int	telefone;
+	
+	private 
+
+}

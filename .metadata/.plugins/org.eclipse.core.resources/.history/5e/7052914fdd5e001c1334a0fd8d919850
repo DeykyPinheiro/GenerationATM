@@ -1,0 +1,9 @@
+
+public class Pessoal {
+	
+	String nome = new String();
+	int dia;
+	int	mes;
+	int ano;
+
+}
