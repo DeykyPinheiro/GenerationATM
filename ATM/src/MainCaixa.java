@@ -13,6 +13,11 @@ public class MainCaixa {
 		int selecionarOpcao = 0;
 		Caixa caixa = new Caixa();
 
+		Conta conta = new Conta();
+		conta.setNome("Deyky");
+		conta.setSenha("1234");
+		conta.setSaldoDaConta(8);
+		listaDeContas.add(conta);
 		while (opcaoInicial != 2) {
 			System.out.println("\n================ MENU DE ESPERA ================");
 			System.out.println("Estado De Espera...");
@@ -24,10 +29,6 @@ public class MainCaixa {
 			System.out.println();
 
 			if (opcaoInicial == 1) {
-				Conta conta = new Conta();
-				conta.setNome("Deyky");
-				conta.setSenha("1234");
-				listaDeContas.add(conta);
 
 				System.out.println("Sessao Iniciada\n");
 				while (selecionarOpcao != 3) {
@@ -42,7 +43,7 @@ public class MainCaixa {
 
 					if (selecionarOpcao == 1) {
 						System.out.println("Abertura de conta");
-						caixa.abrirConta(input, conta, listaDeContas);
+						caixa.abrirConta(input, listaDeContas);
 					} else if (selecionarOpcao == 2) {
 						caixa.login(input, listaDeContas);
 //						System.out.println("Digite Seu Login(Id Conta)");

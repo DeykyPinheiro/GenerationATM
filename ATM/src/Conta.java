@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Conta extends Pessoa {
 
@@ -6,6 +7,17 @@ public class Conta extends Pessoa {
 	private int idConta;
 	private double saldoDaConta;
 	private boolean contaEstaAtiva;
+	private ArrayList<Double> extrato = new ArrayList<Double>();
+	
+	
+
+	public ArrayList<Double> getExtrato() {
+		return extrato;
+	}
+
+	public void setExtrato(double valor) {
+		this.extrato.add(valor);
+	}
 
 	public Conta() {
 		this.tipoDeConta = "Inativa";
