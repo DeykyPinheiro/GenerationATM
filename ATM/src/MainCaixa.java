@@ -5,18 +5,19 @@ import java.util.Scanner;
 public class MainCaixa {
 
 	public static void main(String[] args) {
-
+		
 		Scanner input = new Scanner(System.in);
 		ArrayList<Conta> listaDeContas = new ArrayList<Conta>();
 
 		int opcaoInicial = -1;
 		int selecionarOpcao = 0;
 		Caixa caixa = new Caixa();
+		
 
 		Conta conta = new Conta();
 		conta.setNome("Deyky");
 		conta.setSenha("1234");
-		conta.setSaldoDaConta(8);
+		conta.setSaldoDaConta(350);
 		listaDeContas.add(conta);
 		while (opcaoInicial != 2) {
 			System.out.println("\n================ MENU DE ESPERA ================");

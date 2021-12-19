@@ -11,6 +11,7 @@ public class Caixa {
 //	classe de menus
 //	adicionar uma classe de verificacoes
 //	classe com avisos
+//	refatorar o codigo
 
 	public void abrirConta(Scanner input, ArrayList<Conta> listaDeContas) {
 		Conta conta = new Conta();
@@ -54,7 +55,7 @@ public class Caixa {
 			System.out.print("Digite Uma opcao Valida: ");
 			System.out.println();
 
-			while (opcao != 5) {
+			while (opcao != 6) {
 				opcao = input.nextInt();
 				if (opcao == 1) {
 					System.out.println("saldo da conta: " + listaDeContas.get(id).getSaldoDaConta());
@@ -115,7 +116,9 @@ public class Caixa {
 //		TODO verificacoes
 		System.out.println("tranferencia relizada");
 		origen.setSaldoDaConta(origen.getSaldoDaConta() - valorTranferido);
+		origen.setExtrato(valorTranferido * -1);
 		destino.setSaldoDaConta(destino.getSaldoDaConta() + valorTranferido);
+		destino.setExtrato(valorTranferido);
 	}
 
 }
