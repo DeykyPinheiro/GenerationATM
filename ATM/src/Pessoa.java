@@ -1,26 +1,36 @@
 
 public class Pessoa {
 
-	private String nome = new String();
+	private String primeiroNome = new String();
+	private String ultimoNome = new String();
 	private int diaDeNascimento;
 	private int mesDeNascimento;
 	private int anoDeNascimento;
 	private String telefone = new String();
 
 	public Pessoa() {
-		this.nome = "Vazio";
+		this.primeiroNome = "Vazio";
+		this.ultimoNome = "Vazio";
 		this.diaDeNascimento = 0;
 		this.mesDeNascimento = 0;
 		this.anoDeNascimento = 0;
 		this.telefone = "000000000";
 	}
-
-	public String getNome() {
-		return nome;
+	
+	public String getPrimeiroNome() {
+		return primeiroNome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setPrimeiroNome(String primeiroNome) {
+		this.primeiroNome = primeiroNome;
+	}
+
+	public String getUltimoNome() {
+		return ultimoNome;
+	}
+
+	public void setUltimoNome(String ultimoNome) {
+		this.ultimoNome = ultimoNome;
 	}
 
 	public int getDiaDeNascimento() {

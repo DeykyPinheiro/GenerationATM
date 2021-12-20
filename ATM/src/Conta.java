@@ -67,7 +67,7 @@ public class Conta extends Pessoa {
 	}
 
 	public void status() {
-		System.out.printf("Cliente: %s\n", this.getNome());
+		System.out.printf("Cliente: %s\n", this.getPrimeiroNome());
 		System.out.printf("Data De Nascimento: %d/%d/%d\n", this.getDiaDeNascimento(), this.getMesDeNascimento(),
 				this.getAnoDeNascimento());
 		System.out.printf("Telefone: %s\n", this.getTelefone());

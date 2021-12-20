@@ -1,63 +1,49 @@
 import java.util.ArrayList;
+
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+import javax.swing.plaf.basic.BasicCheckBoxMenuItemUI;
 
 public class MainCaixa {
 
 	public static void main(String[] args) {
-		
+
 		Scanner input = new Scanner(System.in);
 		ArrayList<Conta> listaDeContas = new ArrayList<Conta>();
-
 		int opcaoInicial = -1;
-		int selecionarOpcao = 0;
+		int selecionarOpcao = -1;
 		Caixa caixa = new Caixa();
-		
+		Menus menu = new Menus();
+		Verificacoes verificar = new Verificacoes();
+		Servico servico = new Servico();
 
+//		dados do primeiro cadastro
 		Conta conta = new Conta();
-		conta.setNome("Deyky");
+		conta.setPrimeiroNome("Deyky");
 		conta.setSenha("1234");
-		conta.setSaldoDaConta(350);
+		conta.setSaldoDaConta(15000);
 		listaDeContas.add(conta);
+
+		Conta conta2 = new Conta();
+		conta2.setPrimeiroNome("Mikael");
+		conta2.setSenha("1234");
+		conta2.setSaldoDaConta(2);
+		listaDeContas.add(conta2);
+		System.out.println(listaDeContas.get(0).getPrimeiroNome());
+		System.out.println(listaDeContas.get(1).getPrimeiroNome());
+
 		while (opcaoInicial != 2) {
-			System.out.println("\n================ MENU DE ESPERA ================");
-			System.out.println("Estado De Espera...");
-			System.out.println("1 - Para Iniciar Sessão");
-			System.out.println("2 - Para sair");
-			System.out.println("==============================================");
-			System.out.print("Digite Uma opcao Valida: ");
-			opcaoInicial = input.nextInt();
-			System.out.println();
-
+			opcaoInicial = menu.menuDeEspera(input);
 			if (opcaoInicial == 1) {
-
-				System.out.println("Sessao Iniciada\n");
 				while (selecionarOpcao != 3) {
-					System.out.println("\n============ MENU PRINCIPAL ================");
-					System.out.println("1 - Abrir Conta");
-					System.out.println("2 - Fazer Login");
-					System.out.println("3 - Volta Ao Menu De Espera");
-					System.out.println("==============================================");
-					System.out.print("Digite Uma opcao Valida: ");
-					selecionarOpcao = input.nextInt();
-					System.out.println();
-
+					selecionarOpcao = menu.menuPrincipal(input);
 					if (selecionarOpcao == 1) {
-						System.out.println("Abertura de conta");
-						caixa.abrirConta(input, listaDeContas);
+						servico.abrirConta(input, listaDeContas);
 					} else if (selecionarOpcao == 2) {
-						caixa.login(input, listaDeContas);
-//						System.out.println("Digite Seu Login(Id Conta)");
-						
-						
+						caixa.RealizarOperacao(input, listaDeContas, menu, verificar, servico);
 					}
-					
-					
-					System.out.println("\nlista de contas");
-					for (int i = 0; i < listaDeContas.size(); i++) {
-						System.out.println(i + " - " + listaDeContas.get(i).getNome());
-					}
-
+					servico.mostrarListaDeContas(listaDeContas);
 				}
 
 			} else if (opcaoInicial == 2) {
@@ -69,7 +55,6 @@ public class MainCaixa {
 		}
 
 		System.out.println("Fim Da Sessão..");
-
 		input.close();
 	}
 }
